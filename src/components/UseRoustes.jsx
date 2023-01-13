@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import PrivateRoute from "./PrivateRoute/private";
-import PublicRoute from "./PublicRoute/publick";
+import PublicRoute from "./PublicRoute/PublicRoute";
 
 
 const HomePage = lazy(() => import("pages/Home/home"));
