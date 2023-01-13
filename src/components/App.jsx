@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { SelectIsLoadingUserStatus } from "redux/auth/authSelector";
 import { current } from "redux/auth/authOperation";
-function  App() {
+function App() {
 
   const dispatch = useDispatch();
   const isLoadingUser = useSelector(SelectIsLoadingUserStatus);
@@ -20,13 +20,13 @@ function  App() {
       display: 'block',
       justifyContent: 'center',
       alignItems: 'center',
-      
+
       color: '#010101'
     }}
   >
-    {isLoadingUser ? <p>....Loading</p> :
+    {isLoadingUser ? <p>Loading...</p> :
       <UserRoutes />}
-   
+
   </div>)
 }
 export default App;

@@ -1,4 +1,4 @@
-import {Container, Header } from "components/styles";
+import { Container, Header } from "components/styles";
 import NavbarAuth from "./NavAuth";
 import NavbarUser from "./NavUser";
 import NavbarMenu from './navContacts/navContacts'
@@ -17,19 +17,19 @@ function HomeIcon(props) {
 export default function Navigation() {
   const isLogin = useAuth();
 
-    return (
-        
-        <Header>
-         
-            <Link to="/"><HomeIcon sx={{ fontSize: 40 }} /></Link>
-            <Container >
-                    {isLogin && <NavbarMenu />}
+  return (
 
-                {isLogin ? <NavbarUser /> : <NavbarAuth />} </Container>
+    <Header>
+
+      <Link to="/"><HomeIcon sx={{ fontSize: 40 }} /></Link>
+      <Container >
+        {isLogin && <NavbarMenu />}
+
+        {isLogin ? <NavbarUser /> : <NavbarAuth />} </Container>
 
 
-            </Header>
-          
-)
+    </Header>
+
+  )
 
 }

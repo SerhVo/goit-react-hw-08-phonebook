@@ -1,7 +1,7 @@
 
 import { lazy } from "react";
 import { Suspense } from "react";
-import { Route,Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import PrivateRoute from "./PrivateRoute/private";
 import PublicRoute from "./PublicRoute/publick";
@@ -20,23 +20,23 @@ const UserRoutes = () => {
     return (
         <Suspense fallback={<p>....</p>}>
             <Routes>
-                  <Route path="/" element={<SharedLayout/>}> 
-                    <Route  index element={<HomePage /> } />
-                <Route  element={<PublicRoute/>}>
-                    <Route path="/register" element={<RegisterForm /> } />
-                      <Route path="/login" element={<LoginForm /> } />
-                </Route>
+                <Route path="/" element={<SharedLayout />}>
+                    <Route index element={<HomePage />} />
+                    <Route element={<PublicRoute />}>
+                        <Route path="/register" element={<RegisterForm />} />
+                        <Route path="/login" element={<LoginForm />} />
+                    </Route>
 
-                <Route element={<PrivateRoute />}>
-                 <Route path="/contacts" element={<MyContactsPage /> } />
+                    <Route element={<PrivateRoute />}>
+                        <Route path="/contacts" element={<MyContactsPage />} />
+                    </Route>
+                    <Route path="*" element={<NotFoundPage />} />
                 </Route>
-                    <Route path="*" element={<NotFoundPage /> } />
-                    </Route> 
             </Routes>
-            
 
-    </Suspense>
-)
+
+        </Suspense>
+    )
 
 }
 export default UserRoutes;

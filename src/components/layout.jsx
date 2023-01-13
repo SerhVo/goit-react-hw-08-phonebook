@@ -4,11 +4,11 @@ import Navigation from './Navigation/NavBar';
 
 export default function SharedLayout() {
   return (
-      <>
-     <Navigation />
+    <>
+      <Navigation />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
-      </>
+    </>
   )
 }

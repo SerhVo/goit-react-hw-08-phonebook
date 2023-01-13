@@ -9,10 +9,10 @@ import { selectError } from "redux/selectors";
 
 
 const MyContactsPage = () => {
-  
+
     const isLoading = useSelector(selectIsLoading);
     const error = useSelector(selectError);
-    
+
 
     return (
         <div
@@ -32,7 +32,7 @@ const MyContactsPage = () => {
             {isLoading && !error && <p style={{ color: "tomato" }}>Loading...</p>}
             <ContactList />
         </div >
-)
+    )
 
 }
 export default MyContactsPage;

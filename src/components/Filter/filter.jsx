@@ -14,29 +14,29 @@ import InputLabel from '@mui/material/InputLabel';
 export function FilterContacts() {
 
   const filter = useSelector(selectFilter);
-  const dispatch = useDispatch();    
+  const dispatch = useDispatch();
   const filterId = nanoid();
-  
-const handleChange = (evt) => {
+
+  const handleChange = (evt) => {
     const { value } = evt.target;
     dispatch(setFilter(value));
   }
 
   return (
-  <div className={style.box}>
-    
-      
-    <p className={style.name}>  Find contacts by name </p>
+    <div className={style.box}>
+
+
+      <p className={style.name}>  Find contacts by name </p>
       <InputLabel htmlFor="filterId">
-     
-          </InputLabel>
-        <Input type="text"
-                   name="filter"
-                   value={filter} 
-                    placeholder="find contacts"
-                    onChange={handleChange}
-                    id={filterId} />
-     
- </div>)
+
+      </InputLabel>
+      <Input type="text"
+        name="filter"
+        value={filter}
+        placeholder="find contacts"
+        onChange={handleChange}
+        id={filterId} />
+
+    </div>)
 };
 
