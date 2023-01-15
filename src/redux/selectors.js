@@ -14,6 +14,5 @@ export const selectFilterdContacts = ({ contacts, filter }) => {
         const result = normalizedName.includes(normalizedFilter) || normalizedNumber.includes(normalizedFilter);
         return result;
     })
-
     return filterdContacts;
 }
